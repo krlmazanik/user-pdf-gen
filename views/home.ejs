@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+    <div class="jumbotron">
+        <form action="/generate" method="POST">
+            <div class="form-row align-items-center justify-content-center">
+                <div class="col-8">
+                    <input type="text" name="firstName" placeholder="Enter firstName" class="form-control">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary">Generate a pdf file</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <% include partials/footer %>

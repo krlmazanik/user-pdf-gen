@@ -1,0 +1,40 @@
+<% include partials/header %>
+
+<div class="container">
+    <table class="table table-bordered" border="1">
+        <tr class="table-info">
+            <th>ID</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>image</th>
+            <th>pdf</th>
+        </tr>
+                       
+        <% if(data != null){ 
+                        
+         for(var i = 0;i < data.length;i++) { %>
+         
+        <tr>
+            <td><%=data[i].id%></td>
+            <td><%=data[i].firstName%></td>
+            <td><%=data[i].lastName%></td>
+            <% if(data[i].image.length){ %>
+                <td>exists</td>
+            <% } %>
+            <% if(data[i].pdf){ %>
+                <td>exists</td>
+            <% } else { %>
+                <td>NULL</td<
+            <% } %>
+        </tr>
+    <% }
+    
+     }else{ %>
+         <tr>
+            <td colspan="3">No users were found</td>
+         </tr>
+    <% } %>
+    </table>
+</div>
+
+<% include partials/footer %>
